@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Blog</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(16, 16, 16);
+            max-width: 100%;
+            height: auto;
+            margin: auto 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Poppins,sans-serif;
+        }
+        .container1{
+            max-width: 1600px;
+            width: 100%;
+            height: auto;
+        }
+        
+        .box_resume{
+            text-align: center;
+            margin-top: 20px;
+        }
+        .box_resume span{
+            font-size: 95px;
+            font-weight: 800;
+            color: hsla(0,0%,100%,.07);
+            letter-spacing: 10px;
+            line-height: .7;
+        }
+        .box_resume span h1{
+            font-size: 52px;
+            margin-top: -55px;
+            font-weight: 800;
+            letter-spacing: normal;
+            color: #ededed;
+        }
+        .box_resume span h1 span{
+            font-size: 52px;
+            margin-top: -55px;
+            font-weight: 800;
+            color:#FFB400;
+            letter-spacing: normal;
+        }
+        
+        
+        .box_icon{
+            margin-top: 80px;
+            position: fixed;
+            right: 30px;
+        }
+        .box_icon .fa{
+            color: rgb(255, 255, 255);
+            font-size: 15px;
+            margin-top: 17px;
+        }
+        .box_icon .fa-house{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+            transition: 0.4s;
+        }
+        .box_icon .fa-house:hover{
+            background-color: #FFB400;
+            transition: 0.4s;
+        }
+        .box_icon .fa-user{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+            transition: 0.4s;
+        }
+        .box_icon .fa-user:hover{
+            background-color: #FFB400;
+            transition: 0.4s;
+        }
+        .box_icon .fa-briefcase{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+            transition: 0.4s;
+        }
+        .box_icon .fa-briefcase:hover{
+            background-color: #FFB400;
+            transition: 0.4s;
+        }
+        .box_icon .fa-envelope-open{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+            transition: 0.4s;
+        }
+        .box_icon .fa-envelope-open:hover{
+            background-color: #FFB400;
+            transition: 0.4s;
+        }
+        .box_icon .fa-comments{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+            transition: 0.4s;
+        }
+        .box_icon .fa-comments:hover{
+            background-color: #FFB400;
+            transition: 0.4s;
+        }
+        .box_icon ul li{
+            list-style: none;
+        }
+        .fa-circle-half-stroke{
+            color: aliceblue;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+            padding: 13.5px;
+            font-size: 22px;
+            position: fixed;
+            right: 30px;
+            top: 40px;
+        }
+        .fa-moon{
+            color: aliceblue;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+            padding: 13.5px;
+            font-size: 22px;
+            position: fixed;
+            right: 30px;
+            top: 40px;
+        }
+        
+        .box_vdo_big1{
+            margin: 90px;
+        }
+        .box_vdo_big2{
+            margin-top: 580px;
+            margin-left: 90px;
+        }
+        .box_vdo1 {
+            width: 370px;
+            height: 440px;
+            color: #ededed;
+            background-color: #2b2a2a;
+            border-radius: 10px;
+            margin-left: 35px;
+            float: left;
+            overflow: hidden;
+        }
+        .box_vdo1 img:hover{
+            transform: scale(1.084);
+            transition: 0.4s;
+        }
+        .box_vdo1 img{
+            transition: 0.4s;
+            overflow: hidden;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .box_vdo1 h1{
+            padding: 20px;
+            font-size: 22px;
+            line-height: 28px;
+            transition: 0.4s;
+        }
+        .box_vdo1 h1:hover{
+            color: #FFB400;
+            transition: 0.4s;
+        }
+        .box_vdo1 h2{
+            margin-top: -20px;
+            padding: 20px;
+            font-size: 16px;
+            line-height: 25px;
+        }
+        .space{
+            margin-bottom: 1100px;
+        }
+        #myBtn {
+            display: block;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+          }
+          html{
+            scroll-behavior: smooth;
+          }
+          #myBtn:hover {
+            background-color: #FFB400;
+          }
+          @media only screen and ( max-width:600px){
+            .box_resume{
+                text-align: center;
+                margin-top: 68px;
+            }
+            .box_resume span{
+                margin-left: -90px;
+                font-size: 55px;
+                font-weight: 800;
+                color: hsla(0,0%,100%,.07);
+                letter-spacing: 1px;
+                line-height: .7;
+            }
+            .box_resume span h1{
+                font-size: 28px;
+                margin-top: -35px;
+                font-weight: 800;
+                letter-spacing: normal;
+                color: #ededed;
+                margin-left: -230px;
+            }
+            .box_resume span h1 span{
+                font-size: 28px;
+                margin-top: -55px;
+                margin-left: 0px;
+                font-weight: 800;
+                color:#FFB400;
+                letter-spacing: normal;
+            }
+            .box_icon{
+                z-index: 1;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: #2b2a2a;
+                position: fixed;
+                overflow: hidden;
+            }
+            .box_icon ul li{
+                display: inline-block;
+            }
+            .box_icon .fa{
+                margin-left: 19px;
+                margin-bottom: 15px;
+                width:52px;
+                height:52px;
+                background-color: #444444;
+            }
+            .fa-circle-half-stroke{
+                color: aliceblue;
+                width: 50px;
+                height: 50px;
+                border-radius: 90px;
+                background-color: #2b2a2a;
+                padding: 13.5px;
+                font-size: 22px;
+                position: fixed;
+                right: 15px;
+                top: 40px;
+            }
+            .fa-moon{
+                color: aliceblue;
+                width: 50px;
+                height: 50px;
+                border-radius: 90px;
+                background-color: #2b2a2a;
+                padding: 13.5px;
+                font-size: 22px;
+                position: fixed;
+                right: 15px;
+                top: 40px;
+            }
+                 /*croll up button*/
+                 #myBtn {
+                    display: block;
+                    position: fixed;
+                    bottom: 100px;
+                    right: 10px;
+                    z-index: 99;
+                    font-size: 18px;
+                    border: none;
+                    outline: none;
+                    background-color: red;
+                    color: white;
+                    cursor: pointer;
+                    padding: 15px;
+                    width: 55px;
+                    height: 55px;
+                    border-radius: 90px;
+                    background-color: #2b2a2a;
+                  }
+                  html{
+                    scroll-behavior: smooth;
+                  }
+                  #myBtn:hover {
+                    background-color: #FFB400;
+                  }
+        
+                  
+        
+        .box_vdo1 {
+            width: 370px;
+            height: 440px;
+            color: #ededed;
+            background-color: #2b2a2a;
+            border-radius: 10px;
+            margin-left: -80px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+        .box_vdo1 img:hover{
+            transform: scale(1.084);
+            transition: 0.4s;
+        }
+        .box_vdo1 img{
+            transition: 0.4s;
+            overflow: hidden;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .box_vdo1 h1{
+            padding: 20px;
+            font-size: 22px;
+            line-height: 28px;
+            transition: 0.4s;
+        }
+        .box_vdo1 h1:hover{
+            color: #FFB400;
+            transition: 0.4s;
+        }
+        .box_vdo1 h2{
+            margin-top: -20px;
+            padding: 20px;
+            font-size: 16px;
+            line-height: 25px;
+        }
+        .space{
+            margin-bottom: 3000px;
+        }
+        
+          }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-upload"></i></button>
+        <div class="box_icon">
+            <div class="box_icon">
+                <ul>
+                    <li><a href="/index.html"><i class="fa fa-house"></i></a></li>
+                    <li><a href="/about/index.html"><i class="fa fa-user"></i></a></li>
+                    <li><a href="/portfio/index.html"><i class="fa fa-briefcase"></i></a></li>
+                    <li><a href="/contact/index.html"><i class="fa fa-envelope-open"></i></a></li>
+                    <li><a href="/blog/index.html"><i class="fa fa-comments"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box_resume">
+            <span>
+                <span>POSTS</span>
+                <h1>MY<span> BLOG</span></h1>
+            </span>
+        </div>
+        <div class="box_vdo_big1">
+            <div class="box_vdo1">
+                <img src="https://tunis-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fblog-post-1.26de9082.jpg&w=1080&q=75"alt="">
+                <hr style="border:2px solid #FFB400;">
+                <h1>How to Own Your Audience by Creating an Email List</h1>
+                <h2>Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack b
+                </h2>
+            </div>
+            <div class="box_vdo1">
+                <img src="https://tunis-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fblog-post-2.3f2d89f0.jpg&w=1080&q=75"alt="">
+                <hr style="border:2px solid #FFB400;">
+                <h1>Top 10 Toolkits for Deep Learning in 2022</h1>
+                <h2>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</h2>
+            </div>
+            <div class="box_vdo1">
+                <img src="https://tunis-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fblog-post-3.aaa1f372.jpg&w=1080&q=75"alt="">
+                <hr style="border:2px solid #FFB400;">
+                <h1>Everything You Need to Know About Web Accessibility</h1>
+                <h2>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ma
+                </h2>
+            </div>
+        </div>
+
+        <div class="box_vdo_big2">
+            <div class="box_vdo1">
+                <img src="https://tunis-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fblog-post-4.61f2f58c.jpg&w=1080&q=75"alt="">
+                <hr style="border:2px solid #FFB400;">
+                <h1>How to Inject Humor & Comedy Into Your Brand</h1>
+                <h2>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id es
+                </h2>
+            </div>
+            <div class="box_vdo1">
+                <img src="https://tunis-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fblog-post-5.e83704c7.jpg&w=1080&q=75"alt="">
+                <hr style="border:2px solid #FFB400;">
+                <h1>Women in Web Design: How To Achieve Success</h1>
+                <h2>Jorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </h2>
+            </div>
+            <div class="box_vdo1">
+                <img src="https://tunis-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fblog-post-6.2b6b686b.jpg&w=1080&q=75"alt="">
+                <hr style="border:2px solid #FFB400;">
+                <h1>Evergreen versus topical content: An overview</h1>
+                <h2>Still ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                </h2>
+            </div>
+        </div>
+        <div class="space"></div>
+    </div>
+
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {
+                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
